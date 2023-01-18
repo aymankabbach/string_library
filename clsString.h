@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <cctype>
 using namespace std;
 
 class clsString
@@ -48,5 +49,18 @@ public:
     short get_number_of_words()
     {
         return get_number_of_words(get_value());
+    }
+    static short get_the_length(string value)
+    {
+        short length=0;
+        for (char letter : value)
+        {
+            length++;
+        }
+        return length;
+    }
+    short get_the_length()
+    {
+        return get_the_length(get_value());
     }
 };

@@ -63,4 +63,10 @@ public:
     {
         return get_the_length(get_value());
     }
+    void append(string new_value)
+    {
+        string value=get_value();
+        value+=new_value;
+        set_value(value);
+    }
 };

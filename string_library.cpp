@@ -5,11 +5,11 @@ using namespace std;
 int main()
 { 
     clsString mystring;
-    mystring.set_value("welcome to myproject");
-    mystring.append(" i am a developer");
-    mystring.upper_first_letter();
+    mystring.set_value("Welcome to my Project");
+    mystring.append(" my name is Ayman");
+    mystring.reverse_cases();
     cout<<"my string is : "<<mystring.get_value()<<endl;
-     mystring.upper_first_letter();
+    mystring.reverse_cases();
     cout<<"my string is : "<<mystring.get_value()<<endl;
     system("pause");
     return 0;

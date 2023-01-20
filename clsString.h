@@ -69,4 +69,13 @@ public:
         value+=new_value;
         set_value(value);
     }
+    void upper_first_letter()
+    {
+        string value=get_value();
+        if (islower(value[0]))
+        {
+            value[0]-=32;
+        }
+        set_value(value);
+    }
 };

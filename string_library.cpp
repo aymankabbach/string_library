@@ -9,6 +9,8 @@ int main()
     mystring.append(" i am a developer");
     mystring.upper_first_letter();
     cout<<"my string is : "<<mystring.get_value()<<endl;
+     mystring.upper_first_letter();
+    cout<<"my string is : "<<mystring.get_value()<<endl;
     system("pause");
     return 0;
 }

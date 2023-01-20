@@ -78,4 +78,13 @@ public:
         }
         set_value(value);
     }
+    void lower_first_letter()
+    {
+        string value=get_value();
+        if (isupper(value[0]))
+        {
+            value[0]+=32;
+        }
+        set_value(value);
+    }
 };

@@ -9,6 +9,8 @@ int main()
     mystring.append(" my name is Ayman");
     mystring.upper();
     cout<<"my string is : "<<mystring.get_value()<<endl;
+    mystring.lower();
+    cout<<"my string is : "<<mystring.get_value()<<endl;
     system("pause");
     return 0;
 }

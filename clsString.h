@@ -115,4 +115,16 @@ public:
         }
         set_value(value);   
     }
+    void lower()
+    {
+      string value=get_value();
+        for (int x=0; x<value.size();x++)
+        {
+            if (isupper(value[x]))
+            {
+                value[x]+=32;;
+            }
+        }
+        set_value(value);   
+    }
 };

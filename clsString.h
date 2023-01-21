@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <cctype>
+#include <vector>
 using namespace std;
 
 class clsString
@@ -126,5 +127,26 @@ public:
             }
         }
         set_value(value);   
+    }
+    vector <string> split(string delim)
+    {
+        string value=get_value();
+        vector <string> split_word;
+        string sword;
+        short pos=0;
+        while ((pos = value.find(delim)) != std::string::npos)
+        {
+            sword=value.substr(0,pos);
+            if (sword!="")
+            {
+                split_word.push_back(sword);
+            }
+            value.erase(0,pos+delim.length());
+        }
+        if (value!="")
+        {
+            split_word.push_back(value);
+        }
+        return split_word;
     }
 };

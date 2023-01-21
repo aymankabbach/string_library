@@ -103,4 +103,16 @@ public:
         }
         set_value(value);
     }
+    void upper()
+    {
+      string value=get_value();
+        for (int x=0; x<value.size();x++)
+        {
+            if (islower(value[x]))
+            {
+                value[x]-=32;;
+            }
+        }
+        set_value(value);   
+    }
 };

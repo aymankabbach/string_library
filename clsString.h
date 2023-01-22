@@ -131,7 +131,7 @@ public:
     vector <string> split(string delim)
     {
         string value=get_value();
-        vector <string> split_word;
+        vector <string> vSplit_word;
         string sword;
         short pos=0;
         while ((pos = value.find(delim)) != std::string::npos)
@@ -139,14 +139,32 @@ public:
             sword=value.substr(0,pos);
             if (sword!="")
             {
-                split_word.push_back(sword);
+                vSplit_word.push_back(sword);
             }
             value.erase(0,pos+delim.length());
         }
         if (value!="")
         {
-            split_word.push_back(value);
+            vSplit_word.push_back(value);
         }
-        return split_word;
+        return vSplit_word;
+    }
+    void replace(string world_to_replace, string new_world)
+    {
+        string value;
+        vector <string> vSplited_string=split(" ");
+        for (string &str : vSplited_string)
+        {
+            if (str==world_to_replace)
+            {
+                str=new_world;
+            }
+        }
+        for (string word : vSplited_string)
+        {
+            value+=word+" ";
+        }
+        value.erase(value.length()-1,value.length());
+        set_value(value);
     }
 };

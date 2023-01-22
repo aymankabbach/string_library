@@ -7,11 +7,8 @@ int main()
     clsString mystring;
     mystring.set_value("welcome to my project");
     mystring.append(" my name is Ayman");
-    vector <string> split_string=mystring.split(" ");
-    for (string str : split_string)
-    {
-        cout<<str<<endl;
-    }
+    mystring.replace("Ayman","Sarah");
+    cout<<mystring.get_value()<<endl;
     system("pause");
     return 0;
 }
